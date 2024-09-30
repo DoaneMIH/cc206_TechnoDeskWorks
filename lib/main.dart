@@ -102,7 +102,7 @@ class MyApp extends StatelessWidget {
 
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
-  
+
 //   // Initialize Firebase with custom options (Web/Manual setup)
 //   await Firebase.initializeApp(
 //     options: FirebaseOptions(
@@ -112,9 +112,9 @@ class MyApp extends StatelessWidget {
 //       projectId: "technodeskworks",
 //     ),
 //   );
-  
+
 //   runApp(MyApp());
-// } 
+// }
 
 
 
@@ -227,7 +227,7 @@ class MyApp extends StatelessWidget {
 // // Firebase initialization with your custom options
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
-  
+
 //   // Initialize Firebase
 //   await Firebase.initializeApp(
 //     options: FirebaseOptions(
@@ -237,7 +237,7 @@ class MyApp extends StatelessWidget {
 //       projectId: "technodeskworks",
 //     ),
 //   );
-  
+
 //   runApp(MyApp());
 // }
 
@@ -421,4 +421,3 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
-
