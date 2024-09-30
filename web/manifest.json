@@ -1,6 +1,11 @@
 {
+
     "name": "exercise_4",
     "short_name": "exercise_4",
+
+    "name": "cc206_technodeskworks",
+    "short_name": "cc206_technodeskworks",
+
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
