@@ -5,11 +5,18 @@
 
 version:
 
+
   revision: "4cf269e36de2573851eaef3c763994f8f9be494d"
   channel: "stable"
 
+
+
   revision: "d3733fcb0ecb65cc845b3426bd32ecc1323db1cd"
   channel: "beta"
+
+  revision: "4cf269e36de2573851eaef3c763994f8f9be494d"
+  channel: "stable"
+
 
 
 project_type: app
@@ -19,6 +26,7 @@ migration:
   platforms:
     - platform: root
 
+
       create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
       base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
     - platform: android
@@ -40,6 +48,7 @@ migration:
       create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
       base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
 
+
       create_revision: d3733fcb0ecb65cc845b3426bd32ecc1323db1cd
       base_revision: d3733fcb0ecb65cc845b3426bd32ecc1323db1cd
     - platform: android
@@ -60,6 +69,27 @@ migration:
     - platform: windows
       create_revision: d3733fcb0ecb65cc845b3426bd32ecc1323db1cd
       base_revision: d3733fcb0ecb65cc845b3426bd32ecc1323db1cd
+
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+    - platform: android
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+    - platform: ios
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+    - platform: linux
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+    - platform: macos
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+    - platform: web
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+    - platform: windows
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
 
 
   # User provided section

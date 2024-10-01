@@ -370,9 +370,13 @@
 				);
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4;
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.cc206Technodeskworks;
+
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4;
 
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4;
@@ -393,12 +397,19 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.cc206Technodeskworks.RunnerTests;
 
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
+
+
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -417,9 +428,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
+
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -442,6 +459,11 @@
 
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
+
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -575,12 +597,17 @@
 				);
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4;
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.cc206Technodeskworks;
 
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4;
+HEAD
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4;
 
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -605,12 +632,18 @@
 				);
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4;
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.cc206Technodeskworks;
 
 
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4;
+
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4;
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4;
 
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";

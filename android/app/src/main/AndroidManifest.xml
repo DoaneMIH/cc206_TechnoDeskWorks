@@ -9,6 +9,12 @@
 
         android:label="exercisce_unit4"
 
+
+
+        android:label="exercisce_unit4"
+
+        android:label="exercise_4"
+
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

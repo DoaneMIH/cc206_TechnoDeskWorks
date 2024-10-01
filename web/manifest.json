@@ -1,6 +1,7 @@
 {
 
 
+
     "name": "exercise_4",
     "short_name": "exercise_4",
 
@@ -10,6 +11,13 @@
 
     "name": "exercisce_unit4",
     "short_name": "exercisce_unit4",
+
+
+    "name": "exercisce_unit4",
+    "short_name": "exercisce_unit4",
+
+    "name": "exercise_4",
+    "short_name": "exercise_4",
 
     "start_url": ".",
     "display": "standalone",

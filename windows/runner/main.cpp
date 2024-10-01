@@ -29,11 +29,17 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   Win32Window::Size size(1280, 720);
 
 
+
   if (!window.Create(L"exercise_4", origin, size)) {
 
   if (!window.Create(L"cc206_technodeskworks", origin, size)) {
 
   if (!window.Create(L"exercisce_unit4", origin, size)) {
+
+
+  if (!window.Create(L"exercisce_unit4", origin, size)) {
+
+  if (!window.Create(L"exercise_4", origin, size)) {
 
     return EXIT_FAILURE;
   }

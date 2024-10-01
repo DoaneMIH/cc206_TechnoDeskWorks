@@ -7,12 +7,18 @@
 	<key>CFBundleDisplayName</key>
 
 
+
 	<string>Exercise 4</string>
 
 	<string>Cc206 Technodeskworks</string>
 
 
 	<string>Exercisce Unit4</string>
+
+
+	<string>Exercisce Unit4</string>
+
+	<string>Exercise 4</string>
 
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
@@ -23,12 +29,19 @@
 	<key>CFBundleName</key>
 
 
+
 	<string>exercise_4</string>
 
 	<string>cc206_technodeskworks</string>
 
 
 	<string>exercisce_unit4</string>
+
+
+
+	<string>exercisce_unit4</string>
+
+	<string>exercise_4</string>
 
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>

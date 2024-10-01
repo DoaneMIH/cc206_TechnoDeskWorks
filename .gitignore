@@ -6,15 +6,26 @@
 .DS_Store
 .atom/
 
+
 .buildlog/
 .history
 .svn/
+
+
+
 
 .build/
 .buildlog/
 .history
 .svn/
 .swiftpm/
+
+
+
+
+.buildlog/
+.history
+.svn/
 
 migrate_working_dir/
 

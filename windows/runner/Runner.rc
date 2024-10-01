@@ -92,6 +92,7 @@ BEGIN
             VALUE "CompanyName", "com.example" "\0"
 
 
+
             VALUE "FileDescription", "exercise_4" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "exercise_4" "\0"
@@ -100,6 +101,8 @@ BEGIN
             VALUE "ProductName", "exercise_4" "\0"
 
             VALUE "FileDescription", "cc206_technodeskworks" "\0"
+
+
 
             VALUE "FileDescription", "exercisce_unit4" "\0"
 
@@ -113,6 +116,15 @@ BEGIN
 
             VALUE "OriginalFilename", "exercisce_unit4.exe" "\0"
             VALUE "ProductName", "exercisce_unit4" "\0"
+
+
+
+            VALUE "FileDescription", "exercise_4" "\0"
+            VALUE "FileVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "exercise_4" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "exercise_4.exe" "\0"
+            VALUE "ProductName", "exercise_4" "\0"
 
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END

@@ -66,12 +66,19 @@
 		335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedPluginRegistrant.swift; sourceTree = "<group>"; };
 
 
+
 		33CC10ED2044A3C60003C045 /* exercise_4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exercise_4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 
 		33CC10ED2044A3C60003C045 /* cc206_technodeskworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cc206_technodeskworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 
 
 		33CC10ED2044A3C60003C045 /* exercisce_unit4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exercisce_unit4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+
+
+
+		33CC10ED2044A3C60003C045 /* exercisce_unit4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exercisce_unit4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+
+		33CC10ED2044A3C60003C045 /* exercise_4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "exercise_4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 
 		33CC10F02044A3C60003C045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33CC10F22044A3C60003C045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Runner/Assets.xcassets; sourceTree = "<group>"; };
@@ -141,12 +148,19 @@
 			children = (
 
 
+
 				33CC10ED2044A3C60003C045 /* exercise_4.app */,
 
 				33CC10ED2044A3C60003C045 /* cc206_technodeskworks.app */,
 
 
 				33CC10ED2044A3C60003C045 /* exercisce_unit4.app */,
+
+
+
+				33CC10ED2044A3C60003C045 /* exercisce_unit4.app */,
+
+				33CC10ED2044A3C60003C045 /* exercise_4.app */,
 
 				331C80D5294CF71000263BE5 /* RunnerTests.xctest */,
 			);
@@ -235,12 +249,18 @@
 			productName = Runner;
 
 
+
 			productReference = 33CC10ED2044A3C60003C045 /* exercise_4.app */;
 
 			productReference = 33CC10ED2044A3C60003C045 /* cc206_technodeskworks.app */;
 
 
 			productReference = 33CC10ED2044A3C60003C045 /* exercisce_unit4.app */;
+
+
+			productReference = 33CC10ED2044A3C60003C045 /* exercisce_unit4.app */;
+
+			productReference = 33CC10ED2044A3C60003C045 /* exercise_4.app */;
 
 			productType = "com.apple.product-type.application";
 		};
@@ -411,6 +431,7 @@
 				MARKETING_VERSION = 1.0;
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -422,10 +443,16 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cc206_technodeskworks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cc206_technodeskworks";
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercisce_unit4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/exercisce_unit4";
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercise_4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/exercise_4";
 
 			};
 			name = Debug;
@@ -439,6 +466,7 @@
 				MARKETING_VERSION = 1.0;
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -450,10 +478,16 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cc206_technodeskworks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cc206_technodeskworks";
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercisce_unit4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/exercisce_unit4";
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercise_4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/exercise_4";
 
 			};
 			name = Release;
@@ -467,6 +501,7 @@
 				MARKETING_VERSION = 1.0;
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -478,10 +513,16 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cc206_technodeskworks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/cc206_technodeskworks";
 
 
+
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercisceUnit4.RunnerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercisce_unit4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/exercisce_unit4";
+
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.exercise4.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/exercise_4.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/exercise_4";
 
 			};
 			name = Profile;
