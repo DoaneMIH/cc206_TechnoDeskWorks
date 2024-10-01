@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
     "name": "exercisce_unit4",
     "short_name": "exercisce_unit4",
+=======
+    "name": "exercise_4",
+    "short_name": "exercise_4",
+>>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

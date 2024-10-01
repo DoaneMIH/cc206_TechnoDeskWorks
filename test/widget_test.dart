@@ -8,7 +8,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+<<<<<<< HEAD
 import 'package:exercisce_unit4/main.dart';
+=======
+import 'package:exercise_4/main.dart';
+>>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
