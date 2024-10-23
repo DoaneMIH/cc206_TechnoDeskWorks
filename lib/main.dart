@@ -1,3 +1,5 @@
+import 'package:exercisce_unit4/techno_signUp_validated.dart';
+import 'package:flutter/material.dart';
 
 // import 'package:exercisce_unit4/Screens/Navigation.dart';
 import 'package:exercisce_unit4/Screens/Wrapper.dart';
