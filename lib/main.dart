@@ -1,6 +1,7 @@
 
 
 
+
 import 'package:exercise_4/navigation/techno_navigation.dart';
 import 'package:exercise_4/Login/techno_logIn_validation.dart'; 
 import 'package:exercise_4/navigation/Profile/techno_profile.dart';
@@ -8,14 +9,19 @@ import 'package:exercise_4/navigation/Notification/techno_notification.dart';
 
 
 
+
 import 'package:exercisce_unit4/Navigation.dart';
 import 'package:exercisce_unit4/techno_searchBar.dart';
 import 'package:exercisce_unit4/techno_signUp_validated.dart';
 
 
+
 import 'package:exercisce_unit4/Navigation.dart';
 import 'package:exercisce_unit4/techno_searchBar.dart';
 import 'package:exercisce_unit4/techno_signUp_validated.dart';
+
+import 'package:exercise_4/techno_logIn_validation.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -52,6 +58,7 @@ class MyApp extends StatelessWidget {
         'notifications': (BuildContext ctx) => const NotificationScreen(),
 
       },
+
 
 
   // This widget is the root of your application.
@@ -169,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen(),
+      home: logIn(),
     );
   }
 }
@@ -433,7 +440,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.bold,
                     )))),
         Positioned(
-          top: 690,
+          top: 675,
           left: 80,
           child: GestureDetector(
             onTap: () {
@@ -452,7 +459,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Positioned(
-          top: 690,
+          top: 675,
           left: 170,
           child: GestureDetector(
             onTap: () {
@@ -471,7 +478,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Positioned(
-          top: 690,
+          top: 675,
           left: 260,
           child: GestureDetector(
             onTap: () {
