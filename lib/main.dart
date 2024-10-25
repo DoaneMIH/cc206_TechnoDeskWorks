@@ -1,3 +1,4 @@
+import 'package:exercise_4/techno_logIn_validation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen(),
+      home: logIn(),
     );
   }
 }
@@ -274,7 +275,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.bold,
                     )))),
         Positioned(
-          top: 690,
+          top: 675,
           left: 80,
           child: GestureDetector(
             onTap: () {
@@ -293,7 +294,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Positioned(
-          top: 690,
+          top: 675,
           left: 170,
           child: GestureDetector(
             onTap: () {
@@ -312,7 +313,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Positioned(
-          top: 690,
+          top: 675,
           left: 260,
           child: GestureDetector(
             onTap: () {
