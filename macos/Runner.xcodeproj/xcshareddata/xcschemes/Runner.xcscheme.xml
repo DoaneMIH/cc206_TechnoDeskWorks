@@ -16,9 +16,16 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33CC10EC2044A3C60003C045"
 
+
                BuildableName = "exercise_4.app"
 
                BuildableName = "exercisce_unit4.app"
+
+
+               BuildableName = "exercisce_unit4.app"
+
+               BuildableName = "exercise_4.app"
+
 
                BlueprintName = "Runner"
                ReferencedContainer = "container:Runner.xcodeproj">
@@ -36,9 +43,15 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CC10EC2044A3C60003C045"
 
+
             BuildableName = "exercise_4.app"
 
             BuildableName = "exercisce_unit4.app"
+
+
+            BuildableName = "exercisce_unit4.app"
+
+            BuildableName = "exercise_4.app"
 
             BlueprintName = "Runner"
             ReferencedContainer = "container:Runner.xcodeproj">
@@ -74,9 +87,16 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CC10EC2044A3C60003C045"
 
+
             BuildableName = "exercise_4.app"
 
             BuildableName = "exercisce_unit4.app"
+
+
+            BuildableName = "exercisce_unit4.app"
+
+            BuildableName = "exercise_4.app"
+
 
             BlueprintName = "Runner"
             ReferencedContainer = "container:Runner.xcodeproj">
@@ -95,9 +115,16 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CC10EC2044A3C60003C045"
 
+
             BuildableName = "exercise_4.app"
 
             BuildableName = "exercisce_unit4.app"
+
+
+            BuildableName = "exercisce_unit4.app"
+
+            BuildableName = "exercise_4.app"
+
 
             BlueprintName = "Runner"
             ReferencedContainer = "container:Runner.xcodeproj">
