@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 name: exercisce_unit4
-=======
+
 name: exercise_4
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -23,11 +23,11 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-<<<<<<< HEAD
+
   sdk: ^3.6.0-149.3.beta
-=======
+
   sdk: ^3.5.2
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -36,10 +36,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-<<<<<<< HEAD
+
   gradient_elevated_button : ^0.0.5
-=======
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
+
   flutter:
     sdk: flutter
 
@@ -47,10 +47,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-<<<<<<< HEAD
+
   curved_navigation_bar: ^1.0.6
-=======
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
+  gradient_elevated_button: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -68,7 +68,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-<<<<<<< HEAD
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -81,12 +81,12 @@ flutter:
     - assets/images/facebook.png
     - assets/images/google.png
     - assets/images/linkedin.png
-=======
+
   uses-material-design: true
   assets:
   - images/
 
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

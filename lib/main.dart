@@ -1,9 +1,10 @@
-<<<<<<< HEAD
+
 import 'package:exercisce_unit4/Navigation.dart';
 import 'package:exercisce_unit4/techno_searchBar.dart';
 import 'package:exercisce_unit4/techno_signUp_validated.dart';
-=======
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
+import 'package:exercise_4/techno_logIn_validation.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-<<<<<<< HEAD
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -31,11 +32,10 @@ class MyApp extends StatelessWidget {
         'SearchBar' : (BuildContext ctx) => const Searchbar(),
       },
 
-=======
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen(),
+      home: logIn(),
     );
   }
 }
@@ -299,7 +299,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fontWeight: FontWeight.bold,
                     )))),
         Positioned(
-          top: 690,
+          top: 675,
           left: 80,
           child: GestureDetector(
             onTap: () {
@@ -318,7 +318,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Positioned(
-          top: 690,
+          top: 675,
           left: 170,
           child: GestureDetector(
             onTap: () {
@@ -337,7 +337,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         Positioned(
-          top: 690,
+          top: 675,
           left: 260,
           child: GestureDetector(
             onTap: () {
@@ -399,7 +399,7 @@ class _LoginScreenState extends State<LoginScreen> {
         )
       ],
     )
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
     );
   }
 }
