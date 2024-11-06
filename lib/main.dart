@@ -1,3 +1,5 @@
+import 'package:exercisce_unit4/navigate.dart';
+import 'package:exercisce_unit4/techno_searchBar.dart';
 import 'package:exercisce_unit4/techno_signUp_validated.dart';
 import 'package:flutter/material.dart';
 

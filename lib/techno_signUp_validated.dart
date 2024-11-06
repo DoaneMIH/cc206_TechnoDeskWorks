@@ -9,12 +9,12 @@ class RegistrationTechno extends StatefulWidget {
 }
 
 class _RegistrationTechnoState extends State<RegistrationTechno> {
-final _formfield = GlobalKey<FormState>();
-final emailController = TextEditingController();
-final passController = TextEditingController();
-final passConfirmController = TextEditingController();
-final nameController = TextEditingController();
-bool passToggle = true;
+  final _formfield = GlobalKey<FormState>();
+  final emailController = TextEditingController();
+  final passController = TextEditingController();
+  final passConfirmController = TextEditingController();
+  final nameController = TextEditingController();
+  bool passToggle = true;
 
   @override
   Widget build(BuildContext context) {
@@ -80,8 +80,8 @@ bool passToggle = true;
                         ),
                       ),
                     ),
-                    validator: (value){
-                      if(value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         return "Please enter your full name";
                       }
                       return null;
@@ -116,12 +116,13 @@ bool passToggle = true;
                         ),
                       ),
                     ),
-                    validator: (value){
+                    validator: (value) {
                       bool emailValid = RegExp(
-                        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value!);
-                      if(value.isEmpty){
+                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                          .hasMatch(value!);
+                      if (value.isEmpty) {
                         return "Enter Email";
-                      } else if(!emailValid){
+                      } else if (!emailValid) {
                         return "Please enter valid email";
                       }
                       return null;
@@ -157,10 +158,10 @@ bool passToggle = true;
                         ),
                       ),
                     ),
-                    validator: (value){
-                      if (value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         return "Please enter your password";
-                      } else if (passController.text.length < 6){
+                      } else if (passController.text.length < 6) {
                         return "Password Length Should be more than 6 characters";
                       }
                       return null;
@@ -196,10 +197,10 @@ bool passToggle = true;
                         ),
                       ),
                     ),
-                    validator: (value){
-                      if(value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         return "Please confirm your password";
-                      } else if(value != passController.text){
+                      } else if (value != passController.text) {
                         return "Passwords do not match";
                       }
                       return null;
@@ -209,11 +210,14 @@ bool passToggle = true;
                 const SizedBox(height: 20),
                 GradientElevatedButton(
                     onPressed: () {
-                      if (_formfield.currentState!.validate()){
+                      Navigator.pushNamed(context, '/');
+                      if (_formfield.currentState!.validate()) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Registration Successful!')),
+                          const SnackBar(
+                              content: Text('Registration Successful!')),
                         );
                         // print("Data Added Successfully");
+                        nameController.clear();
                         emailController.clear();
                         passController.clear();
                         passConfirmController.clear();
