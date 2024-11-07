@@ -1,9 +1,15 @@
 
+
 import 'package:exercise_4/navigation/techno_navigation.dart';
 import 'package:exercise_4/Login/techno_logIn_validation.dart'; 
 import 'package:exercise_4/navigation/Profile/techno_profile.dart';
 import 'package:exercise_4/navigation/Notification/techno_notification.dart';
 
+
+
+import 'package:exercisce_unit4/Navigation.dart';
+import 'package:exercisce_unit4/techno_searchBar.dart';
+import 'package:exercisce_unit4/techno_signUp_validated.dart';
 
 import 'package:flutter/material.dart';
 
@@ -46,26 +52,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: "TechnoWorks",
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromRGBO(255, 255, 255, 1)),
+        // scaffoldBackgroundColor: const Color.fromRGBO(207, 229, 251, 1.0)
       ),
+
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -155,6 +148,14 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+
+      initialRoute: 'Homepage',
+      routes: {
+        '/' : (BuildContext ctx) => const RegistrationTechno(),
+        'Homepage': (BuildContext ctx) => const NavigationTechno(),
+        'SearchBar' : (BuildContext ctx) => const Searchbar(),
+      },
+
 
     );
   }
