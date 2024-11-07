@@ -59,6 +59,7 @@ class MyApp extends StatelessWidget {
         // scaffoldBackgroundColor: const Color.fromRGBO(207, 229, 251, 1.0)
       ),
 
+
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -150,6 +151,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
 
       initialRoute: 'Homepage',
+
+      initialRoute: 'Homepage', //Change to '/' to SignUp
+
       routes: {
         '/' : (BuildContext ctx) => const RegistrationTechno(),
         'Homepage': (BuildContext ctx) => const NavigationTechno(),
