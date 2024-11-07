@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 
-class logIn extends StatefulWidget {
-  const logIn ({super.key});
+class LoginValidatedScreen extends StatefulWidget {
+  const LoginValidatedScreen({super.key});
 
   @override
-  State<logIn> createState() => _logInState();
+  State<LoginValidatedScreen> createState() => _LoginValidatedScreenState();
 }
 
-class _logInState extends State<logIn> {
+class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
   final _formfield = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passController = TextEditingController();
@@ -149,6 +149,8 @@ class _logInState extends State<logIn> {
                         );
                         emailController.clear();
                         passController.clear();
+
+                        Navigator.pushNamed(context, 'home');
                       }
                     },
                     style: GradientElevatedButton.styleFrom(
