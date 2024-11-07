@@ -1,10 +1,12 @@
 
 
+
 import 'package:exercisce_unit4/Navigation.dart';
 import 'package:exercisce_unit4/techno_searchBar.dart';
 import 'package:exercisce_unit4/techno_signUp_validated.dart';
 
 import 'package:exercise_4/techno_logIn_validation.dart';
+
 
 
 import 'package:exercise_4/navigation/techno_navigation.dart';
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
       title: "TechnoWorks",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
+
             seedColor: const Color.fromRGBO(255, 255, 255, 1)),
         // scaffoldBackgroundColor: const Color.fromRGBO(207, 229, 251, 1.0)
       ),
@@ -410,6 +413,7 @@ class _LoginScreenState extends State<LoginScreen> {
       title: "TechnoWorks",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
+
           seedColor: const Color.fromRGBO(255, 255, 255, 1),
         ),
       ),
@@ -420,6 +424,7 @@ class _LoginScreenState extends State<LoginScreen> {
         'profile': (BuildContext ctx) => const Profile(), 
         'notifications': (BuildContext ctx) => const NotificationScreen(), 
       },
+
 
     );
   }

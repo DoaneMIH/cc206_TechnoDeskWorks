@@ -5,11 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-<<<<<<< HEAD
+
 	<string>Exercisce Unit4</string>
-=======
+
 	<string>Exercise 4</string>
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
+	<string>Exercise 4</string>
+
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,11 +19,13 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-<<<<<<< HEAD
+
 	<string>exercisce_unit4</string>
-=======
+
 	<string>exercise_4</string>
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
+	<string>exercise_4</string>
+
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

@@ -27,11 +27,13 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   FlutterWindow window(project);
   Win32Window::Point origin(10, 10);
   Win32Window::Size size(1280, 720);
-<<<<<<< HEAD
+
   if (!window.Create(L"exercisce_unit4", origin, size)) {
-=======
+
   if (!window.Create(L"exercise_4", origin, size)) {
->>>>>>> dd781b7 (Exercise 4 Cabantug, Maquiran, Nacis)
+
+  if (!window.Create(L"exercise_4", origin, size)) {
+
     return EXIT_FAILURE;
   }
   window.SetQuitOnClose(true);
