@@ -3,6 +3,7 @@ import 'package:exercise_4/navigation/Profile/techno_editprofile';
 import 'package:exercise_4/navigation/Profile/techno_payment.dart';
 import 'package:exercise_4/navigation/Profile/techno_testimonials.dart';
 import 'package:exercise_4/navigation/Profile/techno_settings.dart';
+import 'package:exercise_4/navigation/Profile/techno_dashboard.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -97,7 +98,14 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                   InkWell(
-                    onTap: () {}, 
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DashboardScreen(),
+                        ),
+                      );
+                    },
                     child: const ListTile(
                       leading: Icon(Icons.dashboard, color: Colors.orange),
                       title: Text('Dashboard'),
