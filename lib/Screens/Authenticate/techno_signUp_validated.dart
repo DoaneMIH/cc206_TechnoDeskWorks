@@ -399,21 +399,21 @@ bool passToggle = true;
                         child: SizedBox(
                             height: 40,
                             width: 40,
-                            child: Image.asset("assets/images/google.png")),
+                            child: Image.asset("images/google.png")),
                       ),
                       InkWell(
                         onTap: () {},
                         child: SizedBox(
                             height: 40,
                             width: 40,
-                            child: Image.asset("assets/images/facebook.png")),
+                            child: Image.asset("images/facebook.png")),
                       ),
                       InkWell(
                         onTap: () {},
                         child: SizedBox(
                             height: 40,
                             width: 40,
-                            child: Image.asset("assets/images/linkedin.png")),
+                            child: Image.asset("images/linkedin.png")),
                       ),
                     ],
                   ),

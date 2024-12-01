@@ -1,33 +1,36 @@
 
-import 'package:exercisce_unit4/Screens/Home/techno_HomeScreen.dart';
+// import 'package:exercisce_unit4/Screens/Navigation.dart';
+import 'package:exercisce_unit4/Screens/Wrapper.dart';
+import 'package:exercisce_unit4/Services/portfolio.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 //FIREBASE BABY
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
+  // Initialize Firebase
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyBsOsSDKu_1LEbZ52LkeQVdgrtTZjyjqRo",
+      appId: "1:912839656061:android:abac9ddc532f2edf7c6714",
+      messagingSenderId: "912839656061",
+      projectId: "technodeskworks",
+    ),
+  );
 
-//   // Initialize Firebase
-//   await Firebase.initializeApp(
-//     options: FirebaseOptions(
-//       apiKey: "AIzaSyBsOsSDKu_1LEbZ52LkeQVdgrtTZjyjqRo",
-//       appId: "1:912839656061:android:abac9ddc532f2edf7c6714",
-//       messagingSenderId: "912839656061",
-//       projectId: "technodeskworks",
-//     ),
-//   );
-
-//   runApp(
-//     ChangeNotifierProvider(
-//       create: (context) => PortfolioProvider(),
-//       child: const MyApp(),
-//     ),
-//   );
-// }
-
-void main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => PortfolioProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
+
+// void main() {
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -40,10 +43,11 @@ class MyApp extends StatelessWidget {
 
     //UNCOMMENT THIS IF YOU WANT TO STORE SA DATABASE
     //NOTE IF YOU WANT TO UNCOMMENT, EH UNCOMMENT MAN ANG UNDER SA FIREBASE BABY
-      // home: AuthCheck(),
+      home: AuthCheck(),
     
     //IF YOU WANT TO TESTING LANG DIRI KLANG HUHUHUH
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      // home: NavigationTechno(),
       // home: SearchbyCategory(),
     
     );

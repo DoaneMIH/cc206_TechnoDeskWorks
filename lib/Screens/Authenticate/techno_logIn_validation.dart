@@ -1,5 +1,5 @@
+import 'package:exercisce_unit4/Navigation.dart';
 import 'package:exercisce_unit4/Screens/Authenticate/techno_signUp_validated.dart';
-import 'package:exercisce_unit4/Screens/Navigation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -237,21 +237,21 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                         child: SizedBox(
                             height: 40,
                             width: 40,
-                            child: Image.asset("assets/images/google.png")),
+                            child: Image.asset("images/google.png")),
                       ),
                       InkWell(
                         onTap: () {},
                         child: SizedBox(
                             height: 40,
                             width: 40,
-                            child: Image.asset("assets/images/facebook.png")),
+                            child: Image.asset("images/facebook.png")),
                       ),
                       InkWell(
                         onTap: () {},
                         child: SizedBox(
                             height: 40,
                             width: 40,
-                            child: Image.asset("assets/images/linkedin.png")),
+                            child: Image.asset("images/linkedin.png")),
                       ),
                     ],
                   ),
