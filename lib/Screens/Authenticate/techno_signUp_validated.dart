@@ -31,7 +31,7 @@ bool passToggle = true;
 //         password: passController.text,
 //       );
 
-     
+
 //       // if (userCredential != null) {
 
 //         // FirebaseFirestore.instance.collection('users').doc(userCredential.user!.uid).set({
@@ -127,7 +127,7 @@ bool passToggle = true;
                       boxShadow:[
                         BoxShadow(
                           color: Colors.black
-                              .withOpacity(0.1), 
+                              .withOpacity(0.1),
                           blurRadius: 4,
                           spreadRadius: 0.23,
                         )
@@ -166,7 +166,7 @@ bool passToggle = true;
                       boxShadow:[
                         BoxShadow(
                           color: Colors.black
-                              .withOpacity(0.1), 
+                              .withOpacity(0.1),
                           blurRadius: 4,
                           spreadRadius: 0.23,
                         )
@@ -209,7 +209,7 @@ bool passToggle = true;
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black
-                              .withOpacity(0.1), 
+                              .withOpacity(0.1),
                           blurRadius: 4,
                           spreadRadius: 0.23,
                         )
@@ -251,7 +251,7 @@ bool passToggle = true;
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black
-                              .withOpacity(0.1), 
+                              .withOpacity(0.1),
                           blurRadius: 4,
                           spreadRadius: 0.23,
                         )
@@ -304,15 +304,15 @@ bool passToggle = true;
                             .set({
                             'full_name': nameController.text,
                             'email': user.email,
-                          });  
+                          });
                         }
                         nameController.clear();
                         emailController.clear();
                         passController.clear();
                         passConfirmController.clear();
                         Navigator.push(context,MaterialPageRoute(builder: (context) => LoginValidatedScreen()));
-                        } 
-                        
+                        }
+
                       }catch (e){
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Registration failed: $e')),
@@ -449,7 +449,7 @@ bool passToggle = true;
                                   fontWeight: FontWeight.bold),
                             ),
                           )
-                          
+
                         ],
                       ),
                     ],
