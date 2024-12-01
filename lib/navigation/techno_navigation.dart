@@ -12,7 +12,7 @@ class NavigationScreen extends StatefulWidget {
 class _NavigationScreenState extends State<NavigationScreen> {
   int _selectedIndex = 0;
 
-  // List of screens for each tab
+
   static const List<Widget> _screens = <Widget>[
     Screen1(),
     Screen2(),
@@ -76,7 +76,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   }
 }
 
-// Define the different screens
+
 class Screen1 extends StatelessWidget {
   const Screen1({super.key});
 
