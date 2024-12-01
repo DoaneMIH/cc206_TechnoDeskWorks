@@ -20,12 +20,21 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromRGBO(255, 255, 255, 1),
         ),
       ),
+
       initialRoute: 'login',
       routes: {
         'login': (BuildContext ctx) => const LoginValidatedScreen(),
         'home': (BuildContext ctx) => const NavigationScreen(), 
         'profile': (BuildContext ctx) => const Profile(), 
         'notifications': (BuildContext ctx) => const NotificationScreen(), 
+
+      initialRoute: 'login', 
+      routes: {
+        'login': (BuildContext ctx) => const LoginValidatedScreen(), 
+        'home': (BuildContext ctx) => const NavigationScreen(), 
+        'profile': (BuildContext ctx) => const Profile(), 
+        'notifications': (BuildContext ctx) => const NotificationScreen(),
+
       },
     );
   }
