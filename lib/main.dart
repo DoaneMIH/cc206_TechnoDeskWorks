@@ -440,6 +440,7 @@ class _LoginScreenState extends State<LoginScreen> {
           seedColor: const Color.fromRGBO(255, 255, 255, 1),
         ),
       ),
+
       initialRoute: 'login',
       routes: {
         'login': (BuildContext ctx) => const LoginValidatedScreen(),
