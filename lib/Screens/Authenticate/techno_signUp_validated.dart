@@ -1,3 +1,9 @@
+// import 'package:exercisce_unit4/techno_logIn_validation.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:exercisce_unit4/Screens/Authenticate/techno_logIn_validation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_auth_platform_interface/';
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 
@@ -9,12 +15,73 @@ class RegistrationTechno extends StatefulWidget {
 }
 
 class _RegistrationTechnoState extends State<RegistrationTechno> {
+  // final _auth = FirebaseAuth.instance;
 final _formfield = GlobalKey<FormState>();
 final emailController = TextEditingController();
 final passController = TextEditingController();
 final passConfirmController = TextEditingController();
 final nameController = TextEditingController();
+String error = " ";
 bool passToggle = true;
+
+//  Future<void> _register() async {
+//     try {
+//         await _auth.createUserWithEmailAndPassword(
+//         email: emailController.text,
+//         password: passController.text,
+//       );
+
+     
+//       // if (userCredential != null) {
+
+//         // FirebaseFirestore.instance.collection('users').doc(userCredential.user!.uid).set({
+//           // 'fullName': nameController.text,  // Store Full Name
+//           // 'email': emailController.text,    // Store Email
+//           // Add any additional fields you want to store
+//         // });
+
+//         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginValidatedScreen()));
+//       // }
+//     } on FirebaseAuthException catch (e) {
+//       print('Error: $e');
+//     }
+//   }
+
+// Future<void> registerUser() async {
+// const String apiUrl = "http://localhost/technodeskworks/register.php";
+//   try {
+//     final response = await http.post(
+//       Uri.parse(apiUrl),
+//       headers: {"Content-Type": "application/json"},
+//       body: json.encode({
+//         "user_name": nameController.text,
+//         "user_email": emailController.text,
+//         "user_password": passController.text,
+//       }),
+//     );
+
+//     if (response.statusCode == 200) {
+//       final data = json.decode(response.body);
+//       if (data['status'] == 'success') {
+//         ScaffoldMessenger.of(context).showSnackBar(
+//           SnackBar(content: Text(data['message'])),
+//         );
+//       } else {
+//         ScaffoldMessenger.of(context).showSnackBar(
+//           SnackBar(content: Text(data['message'])),
+//         );
+//       }
+//     } else {
+//       ScaffoldMessenger.of(context).showSnackBar(
+//         SnackBar(content: Text('Failed to connect to the server!')),
+//       );
+//     }
+//   } catch (e) {
+//     ScaffoldMessenger.of(context).showSnackBar(
+//       SnackBar(content: Text('Error: $e')),
+//     );
+//   }
+// }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +110,7 @@ bool passToggle = true;
                   child: Image.asset('assets/images/TechnoDeskWorks.png'),
                 ),
                 Container(
-                  width: 330,
+                  width: 290,
                   alignment: Alignment.centerLeft,
                   child: const Text("Register Form",
                       style: TextStyle(
@@ -57,12 +124,12 @@ bool passToggle = true;
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20.0),
-                      boxShadow: const [
+                      boxShadow:[
                         BoxShadow(
-                          color: Color.fromARGB(114, 0, 0, 0),
-                          spreadRadius: 1,
-                          blurRadius: 2,
-                          blurStyle: BlurStyle.normal,
+                          color: Colors.black
+                              .withOpacity(0.1), 
+                          blurRadius: 4,
+                          spreadRadius: 0.23,
                         )
                       ]),
                   width: 300,
@@ -74,9 +141,12 @@ bool passToggle = true;
                       hintText: 'Full name',
                       prefixIcon: Padding(
                         padding: EdgeInsets.only(right: 15),
-                        child: Icon(
-                          Icons.circle_rounded,
-                          color: Color.fromRGBO(21, 131, 220, 1.0),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Icon(
+                            Icons.circle_rounded,
+                            color: Color.fromRGBO(21, 131, 220, 1.0),
+                          ),
                         ),
                       ),
                     ),
@@ -93,12 +163,12 @@ bool passToggle = true;
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20.0),
-                      boxShadow: const [
+                      boxShadow:[
                         BoxShadow(
-                          color: Color.fromARGB(114, 0, 0, 0),
-                          spreadRadius: 1,
-                          blurRadius: 2,
-                          blurStyle: BlurStyle.normal,
+                          color: Colors.black
+                              .withOpacity(0.1), 
+                          blurRadius: 4,
+                          spreadRadius: 0.23,
                         )
                       ]),
                   width: 300,
@@ -110,9 +180,12 @@ bool passToggle = true;
                       hintText: 'Email',
                       prefixIcon: Padding(
                         padding: EdgeInsets.only(right: 15),
-                        child: Icon(
-                          Icons.circle_rounded,
-                          color: Color.fromRGBO(244, 166, 50, 1.0),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Icon(
+                            Icons.circle_rounded,
+                            color: Color.fromRGBO(244, 166, 50, 1.0),
+                          ),
                         ),
                       ),
                     ),
@@ -133,12 +206,12 @@ bool passToggle = true;
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20.0),
-                      boxShadow: const [
+                      boxShadow: [
                         BoxShadow(
-                          color: Color.fromARGB(114, 0, 0, 0),
-                          spreadRadius: 1,
-                          blurRadius: 2,
-                          blurStyle: BlurStyle.normal,
+                          color: Colors.black
+                              .withOpacity(0.1), 
+                          blurRadius: 4,
+                          spreadRadius: 0.23,
                         )
                       ]),
                   width: 300,
@@ -151,9 +224,12 @@ bool passToggle = true;
                       hintText: 'Password',
                       prefixIcon: Padding(
                         padding: EdgeInsets.only(right: 15),
-                        child: Icon(
-                          Icons.circle_rounded,
-                          color: Color.fromRGBO(21, 131, 220, 1.0),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Icon(
+                            Icons.circle_rounded,
+                            color: Color.fromRGBO(21, 131, 220, 1.0),
+                          ),
                         ),
                       ),
                     ),
@@ -172,12 +248,12 @@ bool passToggle = true;
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20.0),
-                      boxShadow: const [
+                      boxShadow: [
                         BoxShadow(
-                          color: Color.fromARGB(114, 0, 0, 0),
-                          spreadRadius: 1,
-                          blurRadius: 2,
-                          blurStyle: BlurStyle.normal,
+                          color: Colors.black
+                              .withOpacity(0.1), 
+                          blurRadius: 4,
+                          spreadRadius: 0.23,
                         )
                       ]),
                   width: 300,
@@ -190,9 +266,12 @@ bool passToggle = true;
                       hintText: 'Confirmed Password',
                       prefixIcon: Padding(
                         padding: EdgeInsets.only(right: 15),
-                        child: Icon(
-                          Icons.circle_rounded,
-                          color: Color.fromRGBO(244, 166, 50, 1.0),
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Icon(
+                            Icons.circle_rounded,
+                            color: Color.fromRGBO(244, 166, 50, 1.0),
+                          ),
                         ),
                       ),
                     ),
@@ -208,26 +287,66 @@ bool passToggle = true;
                 ),
                 const SizedBox(height: 20),
                 GradientElevatedButton(
-                    onPressed: () {
-                      if (_formfield.currentState!.validate()){
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Registration Successful!')),
+                    onPressed: ()async {
+                      try{
+                        if (_formfield.currentState!.validate()){
+                          // Create a new user with email and password
+                          UserCredential userCredential = await FirebaseAuth.instance
+                            .createUserWithEmailAndPassword(
+                              email: emailController.text,
+                              password: passController.text,
                         );
-                        // print("Data Added Successfully");
+                          User? user = userCredential.user;
+                        if (user != null) {
+                            await FirebaseFirestore.instance
+                          .collection('users')
+                          .doc(user.uid)
+                            .set({
+                            'full_name': nameController.text,
+                            'email': user.email,
+                          });  
+                        }
+                        nameController.clear();
                         emailController.clear();
                         passController.clear();
                         passConfirmController.clear();
+                        Navigator.push(context,MaterialPageRoute(builder: (context) => LoginValidatedScreen()));
+                        } 
+                        
+                      }catch (e){
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Registration failed: $e')),
+                        );
                       }
+                      // if (_formfield.currentState!.validate()){
+                      //   // _register();
+                      //   ScaffoldMessenger.of(context).showSnackBar(
+                      //     const SnackBar(content: Text('Registration Successful!')),
+                      //   );
+                      // if (_formfield.currentState!.validate()) {
+                      //   // registerUser();
+                      //   dynamic result = await _auth.registerWithEmailAndPassword(emailController.text, passController.text);
+                      //   if (result == null){
+                      //     setState(() => error = "Please supply a valid email");
+                      //   }
+                        // print("Data Added Successfully");
+                        // nameController.clear();
+                        // emailController.clear();
+                        // passController.clear();
+                        // passConfirmController.clear();
+                        // Navigator.push(context, MaterialPageRoute(builder: ((context) => const LoginValidatedScreen())));
+                      // }
+                    // }
                     },
                     style: GradientElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 25, horizontal: 110),
+                            vertical: 25, horizontal: 130),
                         gradient: const LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
                           colors: [
-                            Color.fromRGBO(255, 255, 255, 1),
-                            Color.fromRGBO(255, 149, 0, 1)
+                            Color.fromARGB(255, 250, 230, 194),
+                            Color.fromARGB(255, 232, 162, 13),
                           ],
                         )),
                     child: const Text(
@@ -308,23 +427,29 @@ bool passToggle = true;
                         topRight: Radius.circular(20),
                         topLeft: Radius.circular(20)),
                   ),
-                  child: const Column(
+                  child: Column(
                     children: [
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             "Already have an account? ",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          Text(
-                            "Log In",
-                            style: TextStyle(
-                                color: Color.fromRGBO(9, 110, 188, 1),
-                                fontWeight: FontWeight.bold),
+                          InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: ((context) => const LoginValidatedScreen())));
+                            },
+                            child: const Text(
+                              "Log In",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(9, 110, 188, 1),
+                                  fontWeight: FontWeight.bold),
+                            ),
                           )
+                          
                         ],
                       ),
                     ],

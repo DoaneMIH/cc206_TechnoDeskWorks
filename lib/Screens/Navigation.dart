@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:exercisce_unit4/techno_FileInvantory.dart';
-import 'package:exercisce_unit4/techno_Notification.dart';
-import 'package:exercisce_unit4/techno_fileOperation.dart';
-import 'package:exercisce_unit4/techno_homepage.dart';
-import 'package:exercisce_unit4/techno_profile.dart';
+import 'package:exercisce_unit4/Screens/Home/techno_FileInvantory.dart';
+import 'package:exercisce_unit4/Screens/Home/techno_HomeScreen.dart';
+import 'package:exercisce_unit4/Screens/Home/techno_Notification.dart';
+import 'package:exercisce_unit4/Screens/Home/techno_profile.dart';
+import 'package:exercisce_unit4/Screens/Home/techno_taskOrganizer.dart';
 import 'package:flutter/material.dart';
 
 class NavigationTechno extends StatefulWidget {
@@ -16,7 +16,7 @@ class NavigationTechno extends StatefulWidget {
 class _NavigationTechnoState extends State<NavigationTechno> {
   
   int _page = 0; // Tracks the current selected page index
-  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+  final GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 
   final List <Widget> _navigationItems = [
     const Icon(Icons.filter_list),
@@ -27,14 +27,15 @@ class _NavigationTechnoState extends State<NavigationTechno> {
   ];
 
    final List<Widget> _pages = [
-    const Homepage(),
+    const HomeScreen(),
+    // const Homepage(),
+    const TaskOrganizer(),
     const FileInventory(),
-    const FileOperation(),
     const NotificationTech(),
     const Profile(),
   ];
   
-  Color bgColor = Colors.amberAccent;
+  Color bgColor = Colors.orange;
 
   @override
   Widget build(BuildContext context) {
@@ -52,19 +53,19 @@ class _NavigationTechnoState extends State<NavigationTechno> {
             _page = index;
             switch(index){
               case 0:
-                bgColor = Colors.amberAccent;
+                bgColor = Colors.orange;
                 break;
               case 1:
-                bgColor = Colors.blue;
+                bgColor = Colors.orange;
                 break;
               case 2:
-                bgColor = Colors.cyan;
+                bgColor = Colors.orange;
                 break;
               case 3:
-                bgColor = Colors.deepOrange;
+                bgColor = Colors.orange;
                 break;
               case 4:
-                bgColor = Colors.greenAccent;
+                bgColor = Colors.orange;
                 break;
             }
           });
