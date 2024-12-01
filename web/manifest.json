@@ -1,14 +1,6 @@
 {
-
     "name": "exercisce_unit4",
     "short_name": "exercisce_unit4",
-
-    "name": "exercise_4",
-    "short_name": "exercise_4",
-
-    "name": "exercise_4",
-    "short_name": "exercise_4",
-
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
