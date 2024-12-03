@@ -1,6 +1,6 @@
 import 'package:exercisce_unit4/Navigation.dart';
 import 'package:exercisce_unit4/Screens/Authenticate/techno_signUp_validated.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:exercisce_unit4/Services/Method.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
@@ -17,6 +17,26 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
   final _formfield = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passController = TextEditingController();
+
+  final UserAuthentication _userAuthentication = UserAuthentication();
+
+  void _login(BuildContext context) async {
+    String? result = await (_userAuthentication.login(
+      email: emailController.text, 
+      password: passController.text));
+      if(result == emailController.text){
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Login successful!')),
+        );
+
+        Navigator.push(context, MaterialPageRoute(builder: (context) => NavigationTechno()));
+
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Login failed: $result.')),
+      );
+      }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -147,22 +167,8 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                 ),
                 const SizedBox(height: 20),
                 GradientElevatedButton(
-                    onPressed: () async {
-                      try {
-                        if(_formfield.currentState!.validate()){
-                          await FirebaseAuth.instance.signInWithEmailAndPassword(
-                            email: emailController.text, 
-                            password: passController.text);
-                          ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text('Login Successful!')));
-                        emailController.clear();
-                        passController.clear();
-                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const NavigationTechno())));
-                        }
-                      } catch (e){
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Login Failed: $e")));
-                      }
+                    onPressed: () => _login(context),
+                      
                       // if (_formfield.currentState!.validate()) {
                       //   // _login();
                       //   ScaffoldMessenger.of(context).showSnackBar(
@@ -175,7 +181,7 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                       //   Navigator.push(context, MaterialPageRoute(builder: ((context) => const NavigationTechno())));
 
                       // }
-                    },
+                    
                     style: GradientElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                             vertical: 25, horizontal: 130),

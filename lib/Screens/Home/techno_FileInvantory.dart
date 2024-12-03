@@ -16,11 +16,27 @@ class FileInventory extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "My Portfolio",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-        ),
-        centerTitle: true,
+        automaticallyImplyLeading: false,
+        flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 214, 148),
+                    Color.fromARGB(255, 255, 222, 192)
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+            ),
+            title: const Text(
+              'File Inventory',
+              style: TextStyle(
+                //color: Color.fromRGBO(57, 105, 144, 1), 
+                //fontWeight: FontWeight.bold,
+              ),
+            ),
+            centerTitle: true,
         backgroundColor: const Color.fromRGBO(207, 229, 251, 1.0),
       ),
       body: SingleChildScrollView(

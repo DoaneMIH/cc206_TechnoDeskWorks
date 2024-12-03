@@ -76,16 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Color.fromRGBO(207, 229, 251, 1.0),
       appBar: AppBar(
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         flexibleSpace: Stack(children: [
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color.fromRGBO(255, 226, 121, 1), Colors.white]),
-            ),
-          ),
           if(!_isMessagePanelVisible)
           Positioned(
               bottom: 1,
@@ -249,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 onPressed: () {
                                                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Applied for ${job['title']}')));
                                                 },
-                                                child: const Text('Apply', style: TextStyle(fontSize: 12),),
+                                                child: const Text('Apply', style: TextStyle(fontSize: 12, color: Colors.white),),
                                               ),
                                             ),
                                           ],

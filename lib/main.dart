@@ -35,24 +35,25 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "TechnoWorks",
 
-    //UNCOMMENT THIS IF YOU WANT TO STORE SA DATABASE
-    //NOTE IF YOU WANT TO UNCOMMENT, EH UNCOMMENT MAN ANG UNDER SA FIREBASE BABY
-      home: AuthCheck(),
-    
-    //IF YOU WANT TO TESTING LANG DIRI KLANG HUHUHUH
-      // home: HomeScreen(),
-      // home: NavigationTechno(),
-      // home: SearchbyCategory(),
-    
+      // UNCOMMENT THIS IF YOU WANT TO STORE SA DATABASE
+      // NOTE IF YOU WANT TO UNCOMMENT, EH UNCOMMENT MAN ANG UNDER SA FIREBASE BABY
+      home: SafeArea(
+        child: AuthCheck(),
+      ),
+
+      // IF YOU WANT TO TESTING LANG DIRI KLANG HUHUHUH
+      // home: SafeArea(child: HomeScreen()),
+      // home: SafeArea(child: NavigationTechno()),
+      // home: SafeArea(child: SearchbyCategory()),
     );
   }
 }
+
 
 
 

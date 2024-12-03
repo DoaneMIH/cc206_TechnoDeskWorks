@@ -1,16 +1,46 @@
-
 import 'package:exercisce_unit4/Screens/Authenticate/techno_logIn_validation.dart';
+import 'package:exercisce_unit4/Screens/Home/Portfolio/technio_editProfileMain.dart';
 import 'package:exercisce_unit4/Screens/Home/Portfolio/techno_bookmarks.dart';
 import 'package:exercisce_unit4/Screens/Home/Portfolio/techno_dashboard.dart';
-import 'package:exercisce_unit4/Screens/Home/Portfolio/techno_editprofile.dart';
 import 'package:exercisce_unit4/Screens/Home/Portfolio/techno_payment.dart';
 import 'package:exercisce_unit4/Screens/Home/Portfolio/techno_settings.dart';
 import 'package:exercisce_unit4/Screens/Home/Portfolio/techno_testimonials.dart';
+import 'package:exercisce_unit4/Services/Method.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({super.key});
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+
+  String name = 'Loading...';
+  String email = 'Loading...';
+
+  void fetchAndDisplayUserDetails()async{
+    UserAuthentication userAuthentication = UserAuthentication();
+    Map<String,dynamic>? userDetails = await userAuthentication.getUserDetails();
+
+    if (userDetails != null) {
+      setState(() {
+        name = userDetails['name'] ?? 'No name available';
+        email = userDetails['email'] ?? 'No email available';
+      });
+    } else {
+      print("Failed to fetch user details");
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    // Fetch user details when the page loads
+    fetchAndDisplayUserDetails(); 
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +72,9 @@ class Profile extends StatelessWidget {
                   const SizedBox(width: 16),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
-                        'Name',
+                        name,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text('Job Position'),
@@ -64,8 +94,8 @@ class Profile extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 16),
-              const Text(
-                'Hi there! I\'m [your name], an experienced freelance graphic designer specializing in creating stunning visuals for digital and print. With over 5 years of experience, my portfolio includes a wide range of projects from corporate identity to marketing materials and more.',
+              Text(
+                'Hi there! I\'m $name, an experienced freelance graphic designer specializing in creating stunning visuals for digital and print. With over 5 years of experience, my portfolio includes a wide range of projects from corporate identity to marketing materials and more.',
                 textAlign: TextAlign.justify,
               ),
               const SizedBox(height: 16),
@@ -78,7 +108,7 @@ class Profile extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const MyProfileScreen(), 
+                          builder: (context) => const MyProfileMain(), 
                         ),
                       );
                     },

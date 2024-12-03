@@ -17,7 +17,26 @@ class _AddTaskPageState extends State<AddTaskPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add Task"),
+        flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 214, 148),
+                    Color.fromARGB(255, 255, 222, 192)
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+            ),
+            title: const Text(
+              'Add Task',
+              style: TextStyle(
+                //color: Color.fromRGBO(57, 105, 144, 1), 
+                //fontWeight: FontWeight.bold,
+              ),
+            ),
+            centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
