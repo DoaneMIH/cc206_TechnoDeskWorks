@@ -32,7 +32,7 @@ class _NavigationTechnoState extends State<NavigationTechno> {
     // const Homepage(),
     const TaskOrganizer(),
     const FileInventory(),
-    const NotificationTech(),
+    const NotificationScreen(),
     const Profile(),
   ];
   
