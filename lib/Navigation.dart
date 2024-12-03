@@ -2,8 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:exercisce_unit4/Screens/Home/techno_FileInvantory.dart';
 import 'package:exercisce_unit4/Screens/Home/techno_HomeScreen.dart';
 import 'package:exercisce_unit4/Screens/Home/techno_Notification.dart';
-// import 'package:exercisce_unit4/Screens/Home/techno_homepage.dart';
-import 'package:exercisce_unit4/Screens/Home/techno_profile.dart';
+import 'package:exercisce_unit4/Screens/Home/techno_ProfileMain.dart';
 import 'package:exercisce_unit4/Screens/Home/techno_taskOrganizer.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +32,7 @@ class _NavigationTechnoState extends State<NavigationTechno> {
     const TaskOrganizer(),
     const FileInventory(),
     const NotificationScreen(),
-    const Profile(),
+    const ProfilePage(),
   ];
   
   Color bgColor = Colors.orange;

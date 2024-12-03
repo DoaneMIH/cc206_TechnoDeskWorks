@@ -1,7 +1,6 @@
 // import 'package:exercisce_unit4/techno_logIn_validation.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:exercisce_unit4/Screens/Authenticate/techno_logIn_validation.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:exercisce_unit4/Services/Method.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:firebase_auth_platform_interface/';
 import 'package:flutter/material.dart';
@@ -23,6 +22,26 @@ final passConfirmController = TextEditingController();
 final nameController = TextEditingController();
 String error = " ";
 bool passToggle = true;
+
+final UserAuthentication _userAuthentication = UserAuthentication();
+
+void _signup(BuildContext context) async {
+  String? result = await _userAuthentication.signUp(name: nameController.text
+  , email: emailController.text, 
+  password: passController.text);
+
+  if(result == null){
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text("SignUp Successfull! Welcome ${nameController.text}"))
+    );
+
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginValidatedScreen()));
+  } else {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text("Registration failed"))
+    );
+  }
+}
 
 //  Future<void> _register() async {
 //     try {
@@ -107,7 +126,7 @@ bool passToggle = true;
                 SizedBox(
                   height: 200,
                   width: 200,
-                  child: Image.asset('assets/images/TechnoDeskWorks.png'),
+                  child: Image.asset('images/TechnoDeskWorks.png'),
                 ),
                 Container(
                   width: 290,
@@ -287,37 +306,37 @@ bool passToggle = true;
                 ),
                 const SizedBox(height: 20),
                 GradientElevatedButton(
-                    onPressed: ()async {
-                      try{
-                        if (_formfield.currentState!.validate()){
-                          // Create a new user with email and password
-                          UserCredential userCredential = await FirebaseAuth.instance
-                            .createUserWithEmailAndPassword(
-                              email: emailController.text,
-                              password: passController.text,
-                        );
-                          User? user = userCredential.user;
-                        if (user != null) {
-                            await FirebaseFirestore.instance
-                          .collection('users')
-                          .doc(user.uid)
-                            .set({
-                            'full_name': nameController.text,
-                            'email': user.email,
-                          });  
-                        }
-                        nameController.clear();
-                        emailController.clear();
-                        passController.clear();
-                        passConfirmController.clear();
-                        Navigator.push(context,MaterialPageRoute(builder: (context) => LoginValidatedScreen()));
-                        } 
+                    onPressed: () => _signup(context),
+                      // try{
+                      //   if (_formfield.currentState!.validate()){
+                      //     // Create a new user with email and password
+                      //     UserCredential userCredential = await FirebaseAuth.instance
+                      //       .createUserWithEmailAndPassword(
+                      //         email: emailController.text,
+                      //         password: passController.text,
+                      //   );
+                      //     User? user = userCredential.user;
+                      //   if (user != null) {
+                      //       await FirebaseFirestore.instance
+                      //     .collection('users')
+                      //     .doc(user.uid)
+                      //       .set({
+                      //       'full_name': nameController.text,
+                      //       'email': user.email,
+                      //     });  
+                      //   }
+                      //   nameController.clear();
+                      //   emailController.clear();
+                      //   passController.clear();
+                      //   passConfirmController.clear();
+                      //   Navigator.push(context,MaterialPageRoute(builder: (context) => LoginValidatedScreen()));
+                      //   } 
                         
-                      }catch (e){
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Registration failed: $e')),
-                        );
-                      }
+                      // }catch (e){
+                      //   ScaffoldMessenger.of(context).showSnackBar(
+                      //     SnackBar(content: Text('Registration failed: $e')),
+                      //   );
+                      // }
                       // if (_formfield.currentState!.validate()){
                       //   // _register();
                       //   ScaffoldMessenger.of(context).showSnackBar(
@@ -337,7 +356,7 @@ bool passToggle = true;
                         // Navigator.push(context, MaterialPageRoute(builder: ((context) => const LoginValidatedScreen())));
                       // }
                     // }
-                    },
+                    
                     style: GradientElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                             vertical: 25, horizontal: 130),

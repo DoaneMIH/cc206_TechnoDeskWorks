@@ -94,10 +94,10 @@ class _TaskOrganizerState extends State<TaskOrganizer> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(207, 229, 251, 1.0),
-      appBar: AppBar(
+      appBar: AppBar(  
+        automaticallyImplyLeading: false,
         backgroundColor: Color.fromRGBO(253, 254, 255, 1),
-        // title: const Text("Task Organizer"),
-        centerTitle: true,
+        // title: const Text("Task Organizer")
       ),
       body: ListView(
         children: [

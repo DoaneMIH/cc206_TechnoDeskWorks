@@ -79,8 +79,26 @@ class _AddPortfolioPageState extends State<AddPortfolioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add Portfolio"), titleTextStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-        centerTitle: true,
+        flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 214, 148),
+                    Color.fromARGB(255, 255, 222, 192)
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+            ),
+            title: const Text(
+              'Add Portfolio',
+              style: TextStyle(
+                //color: Color.fromRGBO(57, 105, 144, 1), 
+                //fontWeight: FontWeight.bold,
+              ),
+            ),
+            centerTitle: true,
         backgroundColor: Color.fromRGBO(207, 229, 251, 1.0),
       ),
       body: Padding(
