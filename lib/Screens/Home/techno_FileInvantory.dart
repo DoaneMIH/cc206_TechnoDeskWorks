@@ -90,7 +90,7 @@ class FileInventory extends StatelessWidget {
                   ),
                 ),
               );
-            }).toList(),
+            }),
             Padding(
               padding: const EdgeInsets.all(10),
               child: ElevatedButton.icon(

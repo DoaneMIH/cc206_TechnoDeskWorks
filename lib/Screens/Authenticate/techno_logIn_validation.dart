@@ -63,7 +63,7 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black
-                              .withOpacity(0.1),
+                              .withOpacity(0.1), 
                           offset: const Offset(1, 3),
                           blurRadius: 4,
                           spreadRadius: 0.23,
@@ -80,7 +80,7 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                         padding: EdgeInsets.only(right: 15),
                         child: Padding(
                           padding: EdgeInsets.only(
-                              left: 8.0),
+                              left: 8.0), 
                           child: Icon(
                             Icons.circle_rounded,
                             color: Color.fromRGBO(83, 173, 243, 1),
@@ -109,7 +109,7 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black
-                              .withOpacity(0.1),
+                              .withOpacity(0.1), 
                           offset: const Offset(1, 3),
                           blurRadius: 4,
                           spreadRadius: 0.23,
@@ -127,10 +127,10 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                         padding: EdgeInsets.only(right: 15),
                         child: Padding(
                           padding: EdgeInsets.only(
-                              left: 10.0),
+                              left: 10.0), 
                           child: Icon(
                             Icons.circle_rounded,
-                            color: Color.fromRGBO(244, 166, 50, 1.0),
+                            color: Color.fromRGBO(244, 166, 50, 1.0), 
                           ),
                         ),
                       ),
@@ -151,7 +151,7 @@ class _LoginValidatedScreenState extends State<LoginValidatedScreen> {
                       try {
                         if(_formfield.currentState!.validate()){
                           await FirebaseAuth.instance.signInWithEmailAndPassword(
-                            email: emailController.text,
+                            email: emailController.text, 
                             password: passController.text);
                           ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(

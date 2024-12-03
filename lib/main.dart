@@ -44,12 +44,12 @@ class MyApp extends StatelessWidget {
     //UNCOMMENT THIS IF YOU WANT TO STORE SA DATABASE
     //NOTE IF YOU WANT TO UNCOMMENT, EH UNCOMMENT MAN ANG UNDER SA FIREBASE BABY
       home: AuthCheck(),
-
+    
     //IF YOU WANT TO TESTING LANG DIRI KLANG HUHUHUH
       // home: HomeScreen(),
       // home: NavigationTechno(),
       // home: SearchbyCategory(),
-
+    
     );
   }
 }
@@ -101,7 +101,7 @@ class MyApp extends StatelessWidget {
 
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
-
+  
 //   // Initialize Firebase with custom options (Web/Manual setup)
 //   await Firebase.initializeApp(
 //     options: FirebaseOptions(
@@ -111,9 +111,9 @@ class MyApp extends StatelessWidget {
 //       projectId: "technodeskworks",
 //     ),
 //   );
-
+  
 //   runApp(MyApp());
-// }
+// } 
 
 
 
@@ -226,7 +226,7 @@ class MyApp extends StatelessWidget {
 // // Firebase initialization with your custom options
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
-
+  
 //   // Initialize Firebase
 //   await Firebase.initializeApp(
 //     options: FirebaseOptions(
@@ -236,7 +236,7 @@ class MyApp extends StatelessWidget {
 //       projectId: "technodeskworks",
 //     ),
 //   );
-
+  
 //   runApp(MyApp());
 // }
 
@@ -420,3 +420,4 @@ class MyApp extends StatelessWidget {
 //     );
 //   }
 // }
+
