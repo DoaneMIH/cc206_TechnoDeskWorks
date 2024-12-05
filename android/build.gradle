@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:8.1.1'
+        // Google Services Plugin
+        classpath 'com.google.gms:google-services:4.4.2'
+        // Kotlin Gradle Plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Custom build directories
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(":app")
+}
+// subprojects {
+//     project.evaluationDependsOn(":app")
+// }
+
+// Clean task
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
